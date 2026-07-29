@@ -3,5 +3,6 @@
 """module to change to string"""
 
 
-def to_str(n:float) -> str:
+def to_str(n: float) -> str:
+    """to str anno"""
     return str(n)
