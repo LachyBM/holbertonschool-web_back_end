@@ -4,6 +4,6 @@
 from typing import List, Union
 
 
-def sum_mixed_list(mxd_list: Union[int, float]) -> float:
+def sum_mixed_list(mxd_lst: Union[int, float]) -> float:
     """funtion to get sum"""
-    return sum(mdx_lst)
+    return sum(mxd_lst)
