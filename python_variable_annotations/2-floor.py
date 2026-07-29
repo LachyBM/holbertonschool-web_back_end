@@ -3,9 +3,6 @@
 """module to find floor"""
 
 
-import math
-
-
-def floor(n: float) -> float:
+def floor(n: float) -> int:
     """math floor"""
-    return math.floor(n)
+    return int(n)
