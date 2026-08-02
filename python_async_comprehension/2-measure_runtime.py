@@ -1,8 +1,8 @@
-#!/usr/bin/env python3  
+#!/usr/bin/env python3
 """module for runtime measure"""
 
 import asyncio
-import time 
+import time
 
 async_comprehension = __import__('1-async_comprehension').async_comprehension
 
