@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 """ 11-main """
+
 from pymongo import MongoClient
 
 
 if __name__ == "__main__":
+    """ connection to mongddb and check logs"""
     client = MongoClient('mongodb://127.0.0.1:27017')
     nginx_collection = client.logs.nginx
 
-    count_logs = nginx_collection.count_documents({})
+    count_logs = nginx_collection.estimated_document_count()
     print(f"{count_logs} logs")
 
     print("Methods:")
