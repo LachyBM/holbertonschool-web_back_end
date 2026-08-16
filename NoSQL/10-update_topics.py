@@ -2,7 +2,7 @@
 """changes topics"""
 
 
-def updates_topics(mongo_collection, name, topics):
+def update_topics(mongo_collection, name, topics):
     """update the topics in school"""
     mongo_collection.update_many(
             {"name":name},
