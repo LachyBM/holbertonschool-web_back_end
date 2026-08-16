@@ -43,11 +43,11 @@ class Server:
         """pagination data from index"""
         data = self.indexed_dataset()
         assert index is not None and 0 <= index <= max(data.keys())
- 
+
         keys = sorted(data.keys())
         page_data = []
         next_index = index
- 
+
         for i in keys:
             if i < index:
                 continue
@@ -57,10 +57,11 @@ class Server:
             page_data.append(data[i])
         else:
             next_index = keys[-1] + 1 if keys else index
- 
+
         return {
             'index': index,
             'next_index': next_index,
             'page_size': len(page_data),
             'data': page_data,
         }
+    
