@@ -9,13 +9,13 @@ function countStudents(path) {
       }
 
       const lines = file.split('\n').filter((line) => line.trim() !== '');
-      const header = lines.shift().split(',');
+      const header = lines.shift().split(',').map((h) => h.trim());;
       const fieldIndex = header.indexOf('field');
       const firstNameIndex = header.indexOf('firstname');
       const studentsByField = {};
 
       lines.forEach((line) => {
-        const values = line.split(',');
+        const values = line.split(',').map((h) => h.trim());;
         const field = values[fieldIndex];
         const firstName = values[firstNameIndex];
 
